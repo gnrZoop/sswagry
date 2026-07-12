@@ -11,78 +11,65 @@
     <div class="exam-container">
         
        <!-- Header කොටස -->
-<div class="header-bar">
-    <h1 class="header-title">SSW Agriculture</h1>
-    <div class="contact-btn" onclick="toggleModal()">Contact</div>
-</div>
+       <div class="header-bar">
+           <h1 class="header-title">SSW Agriculture</h1>
+           <div class="contact-btn" onclick="toggleModal('contactModal')">Contact</div>
+       </div>
 
-<!-- Modal Box එක -->
-<div id="contactModal" class="modal">
-    <br>
-    <br>
-    <br>
-    <h3 style="margin-top: 0; color: #777;">අපට කියන්න</h3>
-    <p style="font-size: 14px; color: #999;">
-        මෙම වෙබ් සයිට් එක තවදුරටත් දියුණු කිරීමට ඔබගේ යෝජනා සහ අදහස් ඉතා වටිනවා.
-        ඔබට ඇති ගැටලු වාර්තා කිරීමට හෝ නව දියුණු කිරීම් සඳහා ඔබේ අදහස් අප සමඟ බෙදා ගැනීමට පහතින් සම්බන්ධ වන්න. 
-        ඒ වගේම ටෙලිග්‍රෑම් සමූහයට (Telegram Group) සම්බන්ධ වී නවතම යාවත්කාලීන කිරීම් සහ දැනුම්දීම් ලබා ගන්න.
-        ප්‍රශ්න හෝ පේපර් සම්බන්ධ ගැටලු හා වෙනත් ගැටලු ඇත්නම් ඒවාද යොමු කරන්න. 
+       <!-- Contact Modal -->
+       <div id="contactModal" class="modal">
+           <div class="modal-content">
+               <h3 style="margin-top: 0; color: #777; font-weight: bold;">අපට කියන්න</h3>
+               <p style="font-size: 14px; color: #999;">
+                   මෙම වෙබ් සයිට් එක තවදුරටත් දියුණු කිරීමට ඔබගේ <span style="color: GoldenRod; font-weight: bold;">යෝජනා සහ අදහස්</span> ඉතා වටිනවා.
+                   ඔබට ඇති ගැටලු වාර්තා කිරීමට හෝ නව දියුණු කිරීම් සඳහා <span style="color: SeaGreen; font-weight: bold;">ඔබේ අදහස්</span> අපට දැනුම් දෙන්න. 
+                   ඒ වගේම <span style="color: #0088cc; font-weight: bold;">ටෙලිග්‍රෑම් සමූහයටම (Telegram Group)</span> ඔබේ <span style="color: FireBrick; font-weight: bold;">ගැටළු වාර්තා කිරීම</span> මගින් සියලු දෙනාටම එක දැන ගත හැක.
+                   <b>ප්‍රශ්න හෝ පේපර් සම්බන්ධ ගැටලු</b> හා වෙනත් ගැටලු ඇත්නම් ඒවාද ටෙලිග්‍රෑම් සමූහයටම (Telegram Group) යොමු කරන්න. 
+               </p>
+               <div class="social-icons">
+                   <a href="https://t.me/sswagry" target="_blank"><img src="telegram.png" alt="Telegram"></a>
+                   <a href="https://wa.me/94750134750?text=SSW%20Agrycuture%20web%20site%20%E0%B6%91%E0%B6%9A%20%E0%B6%9C%E0%B7%90%E0%B6%B1:%20" target="_blank"><img src="whatsapp.jpeg" alt="WhatsApp"></a>
+               </div>
+               <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+               <button class="modal-close-btn" onclick="toggleModal('contactModal')">Close</button>
+           </div>
+       </div>
 
-    </p>
-    
-    <div class="social-icons">
-        <a href="https://t.me/sswagry" target="_blank"><img src="telegram.png" alt="Telegram"></a>
-        <!-- WhatsApp Icon එකට පණිවිඩය සහිත ලින්ක් එක එකතු කරන ලදී -->
-        <a href="https://wa.me/94750134750?text=SSW%20Agrycuture%20web%20site%20%E0%B6%91%E0%B6%9A%20%E0%B6%9C%E0%B7%90%E0%B6%B1:%20" target="_blank"><img src="whatsapp.jpeg" alt="WhatsApp"></a>
-    </div>
+       <!-- Alert Modal -->
+       <div id="alert-modal" class="modal">
+           <div class="modal-content">
+               <h3 style="color: GoldenRod; font-weight: bold;">අවධානය!</h3>
+               <p style="color: var(--text-secondary);">කරුණාකර පළමුව විභාග ප්‍රශ්න පත්‍රයක් තෝරන්න.</p>
+               <button class="button-style" onclick="toggleModal('alert-modal')">හරි</button>
+           </div>
+       </div>
 
-    <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+       <div style="background: #fef7ff; padding: 15px; border-radius: 15px; margin-bottom: 20px;">
+           <h3>1. අභ්‍යාස සහ විභාග</h3>
+           <p>ජපන් භාෂා ප්‍රවීණතා පරීක්ෂණය (පොදු)</p>
+           <button style="width: 100%; margin-bottom: 15px;" onclick="window.open('https://gnrzoop.github.io/sswagrysinhala/', '_blank')">අභ්‍යාස වෙබ් පිටුව</button>
 
-    <button class="modal-close-btn" onclick="toggleModal()">Close</button>
-</div>
+           <p>විභාග ප්‍රශ්න</p>
+           <select id="paper-select" required oninvalid="this.setCustomValidity(' ')" oninput="this.setCustomValidity('')">
+               <option value="" disabled selected>ප්‍රශ්න පත්‍රයක් තෝරන්න</option>
+           </select>
 
-<script>
-    function toggleModal() {
-        const modal = document.getElementById('contactModal');
-        
-        if (modal.style.display === 'block') {
-            modal.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-        } else {
-            modal.style.display = 'block';
-            document.body.classList.add('no-scroll');
-        }
-    }
-</script>
+           <input type="number" id="time-input" placeholder="කාලය (විනාඩි 20 බැගින්)" style="width: 100%; padding: 12px 20px; margin-bottom: 10px; border-radius: 25px; border: 2px solid #000000; background: #ffffff; -webkit-appearance: none; appearance: none; box-sizing: border-box; outline: none;">
+           <button style="width: 100%;" onclick="startExam()">විභාගය පටන් ගන්න</button>
+       </div>
 
-        
-        <div style="background: #fef7ff; padding: 15px; border-radius: 15px; margin-bottom: 20px;">
-            <h3>1. අභ්‍යාස සහ විභාග</h3>
-            
-            <p>ජපන් භාෂා ප්‍රවීණතා පරීක්ෂණය (පොදු)</p>
-            <button style="width: 100%; margin-bottom: 15px;" onclick="window.open('https://gnrzoop.github.io/sswagrysinhala/', '_blank')">අභ්‍යාස වෙබ් පිටුව</button>
+       <div style="background: #f4f4f4; padding: 15px; border-radius: 15px;">
+           <h3>2. PDF බාගත කිරීම්</h3>
+           <p style="color: #FFC107; font-size: 12.5px; font-weight: 500; line-height: 1.5; margin: 12px 6px; text-align: left; background-color: rgba(255, 193, 7, 0.08); padding: 10px 12px; border-radius: 10px; border: 0.5px solid rgba(255, 193, 7, 0.2);">සිංහල PDF 37MB බැවින් එය ලෝඩ් වීමට යම් කාලයක් ගත විය හැක</p>            
+           <p>වගා කරන ලද කෘෂිකර්මාන්ත<br>(Crop Farming) - සිංහල</p>
+           <button style="width: 100%; margin-bottom: 10px;" onclick="window.open('https://asat-nca.jp/si/images/asat_cf_si.pdf', '_blank')">Download PDF</button>
 
-            <p>විභාග ප්‍රශ්න</p>
-            <select id="paper-select" style="width: 100%; padding: 12px 20px; margin-bottom: 10px; border-radius: 25px; border: 2px solid #000000; background: #ffffff; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;"></select>
+           <p>පශු සම්පත් කෘෂිකර්මාන්තය<br>(Livestock Farming) - සිංහල</p>
+           <button style="width: 100%; margin-bottom: 10px;" onclick="window.open('https://asat-nca.jp/si/images/asat_lf_si.pdf', '_blank')">Download PDF</button>
 
-            <input type="number" id="time-input" placeholder="කාලය (විනාඩි 20 බැගින්)" style="width: 100%; padding: 12px 20px; margin-bottom: 10px; border-radius: 25px; border: 2px solid #000000; background: #ffffff; -webkit-appearance: none; -moz-appearance: none; appearance: none; box-sizing: border-box; outline: none;">
-            <button style="width: 100%;" onclick="startExam()">විභාගය පටන් ගන්න</button>
-        </div>
-
-        <div style="background: #f4f4f4; padding: 15px; border-radius: 15px;">
-            <h3>2. PDF බාගත කිරීම්</h3>
-            <p style="color: #FFC107; font-size: 12.5px; font-weight: 500; line-height: 1.5; margin: 12px 6px; text-align: left; background-color: rgba(255, 193, 7, 0.08); padding: 10px 12px; border-radius: 10px; border: 0.5px solid rgba(255, 193, 7, 0.2);">
-             සිංහල PDF 37MB බැවින් එය ලෝඩ් වීමට යම් කාලයක් ගත විය හැක</p>            
-            <p>වගා කරන ලද කෘෂිකර්මාන්ත<br>(Crop Farming) - සිංහල</p>
-            <button style="width: 100%; margin-bottom: 10px;" onclick="window.open('https://asat-nca.jp/si/images/asat_cf_si.pdf', '_blank')">Download PDF</button>
-
-            <p>පශු සම්පත් කෘෂිකර්මාන්තය<br>(Livestock Farming) - සිංහල</p>
-            <button style="width: 100%; margin-bottom: 10px;" onclick="window.open('https://asat-nca.jp/si/images/asat_lf_si.pdf', '_blank')">Download PDF</button>
-
-            <p>ජපන් භාෂා පාඩම් <br>日本語</p>
-            <button style="width: 100%;" onclick="window.open('https://asat-nca.jp/si/images/japanese_text.pdf', '_blank')">Download PDF</button>
-        </div>
-    </div>
+           <p>ජපන් භාෂා පාඩම් <br>日本語</p>
+           <button style="width: 100%;" onclick="window.open('https://asat-nca.jp/si/images/japanese_text.pdf', '_blank')">Download PDF</button>
+       </div>
         <div style="text-align: center; margin-top: 25px; overflow: hidden;">
             <img src="https://count.getloli.com/get/@gnrzoop-ssw-agri" alt="visitor counter" style="max-width: 100%; height: auto;">
         </div>
@@ -103,14 +90,33 @@
     </script>
     <script src="data.js"></script>
     <script>
+     
+    // පොදු Modal ශ්‍රිතය
+    function toggleModal(id) {
+    const modal = document.getElementById(id);
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    } else {
+        modal.style.display = 'flex';
+        document.body.classList.add('no-scroll');
+    }
+}
+        
+
+
         const select = document.getElementById('paper-select');
         for (let id in allPapers) {
             select.innerHTML += `<option value="${id}">${allPapers[id].title}</option>`;
         }
         
         function startExam() {
+            if (!select.value) {
+                toggleModal('alert-modal');
+                return;
+            }
             localStorage.setItem('paperId', select.value);
-            localStorage.setItem('time', document.getElementById('time-input').value);
+            localStorage.setItem('time', document.getElementById('time-input').value || 20);
             window.location.href = 'exam.html';
         }
     </script>
