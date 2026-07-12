@@ -320,3 +320,11 @@ a[href*="github"]:hover {
     color: var(--gold-tap) !important; /* ටැප් එකක් දෙන විට මෘදු වර්ණයකට හැරීම */
     text-decoration: underline !important; /* හොවර් එකේදී විතරක් ලස්සනට යටින් ඉරක් වැටීමට */
 }
+.explanation-text {
+    color: yellow;            /* අකුරු කහ පැහැය */
+    background-color: rgba(0, 0, 0, 0.5); /* කියවීමට පහසු වීමට පසුබිමක් */
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-left: 4px solid yellow; /* වෙන් කර පෙන්වීමට */
+}

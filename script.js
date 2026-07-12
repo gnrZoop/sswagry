@@ -1,7 +1,7 @@
 let currentQ = 0;
 const paper = allPapers[localStorage.getItem('paperId')];
 let userAnswers = new Array(paper.questions.length).fill(null);
-let isFinished = false; // විභාගය අවසන් දැයි පරීක්ෂා කිරීමට
+let isFinished = false;
 
 // පිළිතුරු අහඹු ලෙස සැකසීම
 let shuffledOptions = paper.questions.map(q => {
@@ -28,29 +28,36 @@ function render() {
     let imgHTML = q.img ? `<img src="${q.img}" style="width:100%; border-radius:12px; margin-bottom:15px;">` : '';
     
     // ප්‍රශ්න සහ උත්තර Render කිරීම
-    document.getElementById('question-box').innerHTML = `<h3>${q.q}</h3>` + imgHTML + 
-        shuffledOptions[currentQ].map(o => {
-            let className = 'option-btn';
-            if(userAnswers[currentQ] === o) className += ' selected';
-            
-            // විභාගය අවසන් නම් වර්ණ ගැන්වීම
-            if(isFinished) {
-                if(o === paper.questions[currentQ].options[0]) className += ' correct';
-                else if(userAnswers[currentQ] === o && o !== paper.questions[currentQ].options[0]) className += ' wrong';
-            }
-            
-            return `<button class="${className}" onclick="${isFinished ? '' : "select('"+o+"')"}">${o}</button>`;
-        }).join('');
+    let optionsHTML = shuffledOptions[currentQ].map(o => {
+        let className = 'option-btn';
+        if(userAnswers[currentQ] === o) className += ' selected';
+        
+        if(isFinished) {
+            if(o === paper.questions[currentQ].options[0]) className += ' correct';
+            else if(userAnswers[currentQ] === o && o !== paper.questions[currentQ].options[0]) className += ' wrong';
+        }
+        
+        return `<button class="${className}" onclick="${isFinished ? '' : "select('"+o+"')"}">${o}</button>`;
+    }).join('');
+
+    // explanation කොටස එකතු කිරීම
+    let explanationHTML = '';
+    if (isFinished && q.explanation) {
+        explanationHTML = `<div class="explanation-text" style="color: yellow; margin-top: 15px; padding: 10px; border: 1px solid yellow; border-radius: 8px;">
+            <strong>විස්තරය:</strong> ${q.explanation}
+        </div>`;
+    }
+    
+    document.getElementById('question-box').innerHTML = `<h3>${q.q}</h3>` + imgHTML + optionsHTML + explanationHTML;
     
     // ප්‍රශ්න අංක දර්ශකය (Indicators) Render කිරීම
     document.getElementById('indicator').innerHTML = paper.questions.map((_,i) => {
         let indClass = 'ind-box';
         if(isFinished) {
-            // විභාගය අවසන් නම් නිවැරදි/වැරදි වර්ණ
             if(userAnswers[i] === paper.questions[i].options[0]) indClass += ' correct-ind';
             else indClass += ' wrong-ind';
         } else if(userAnswers[i]) {
-            indClass += ' answered'; // පිළිතුරු දී ඇත්නම් සාමාන්‍ය වර්ණය
+            indClass += ' answered';
         }
         return `<div class="${indClass}">${i+1}</div>`;
     }).join('');
@@ -79,14 +86,15 @@ function checkSubmit() {
 }
 
 function showResults() {
-    isFinished = true; // විභාගය අවසන් කළ බව සලකුණු කරයි
+    isFinished = true;
     clearInterval(timerInterval);
     let score = userAnswers.filter((a,i) => a === paper.questions[i].options[0]).length;
     let res = (score / paper.questions.length) * 100;
     
-    render(); // වර්ණ ගැන්වීම් සමඟ නැවත render කිරීම
+    render();
     
     let status = res >= 65 ? '<span class="pass">PASS!</span>' : '<span class="fail">FAIL!</span>';
     showModal("ප්‍රතිඵලය", `ලකුණු: ${score}<br>ප්‍රතිශතය: ${res}%<br><h3>${status}</h3>`);
 }
+
 render();
