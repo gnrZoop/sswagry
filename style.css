@@ -33,6 +33,13 @@ body {
     background-image: radial-gradient(circle at top right, rgba(196, 185, 168, 0.04), transparent 50%);
     background-attachment: fixed;
 
+    /* 👇 මේ පේළි 5 slect block කරන්න */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+}
 /* ==========================================================================
    3. Main Container
    ========================================================================== */

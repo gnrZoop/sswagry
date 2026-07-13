@@ -98,3 +98,14 @@ function showResults() {
 }
 
 render();
+
+// Select කිරීම නවත්වන්න
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
+
+// Right Click නවත්වන්න
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
