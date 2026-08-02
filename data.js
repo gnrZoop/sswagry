@@ -1,6 +1,6 @@
 const allPapers = {
     "paper1": {
-        "title": Pape 1",
+        "title": "Paper 1",
         "questions": [
             { "q": "1. මෑන්ඩරින් දොඩම්වල රෝගී හෝ දුර්වල පැල කළ යුත්තේ කුමක්ද?", "options": ["ඉවත් කිරීම", "එලෙසම තැබීම", "පොහොර යෙදීම"], "img": "" },
             { "q": "2. ප්‍රභාසංශ්ලේෂණයට අවශ්‍ය සාධක මොනවාද?", "options": ["හිරු එළිය, කාබන්ඩයොක්සයිඩ්, ජලය සහ හරිතප්‍රභ", "නයිට්‍රජන්, පස්, ජලය", "කාබන්ඩයොක්සයිඩ් පමණක්"], "img": "" },
@@ -192,7 +192,7 @@ const allPapers = {
             "explanation": "අංශුමය ව්‍යුහයක් සහිත පසෙහි ජලය රඳවා ගැනීමේ සහ වාතාශ්‍රය ලැබීමේ හැකියාව වැඩි වන අතර, එය බෝග වර්ධනය සඳහා ඉතා හිතකර පරිසරයක් නිර්මාණය කරයි.",
             "img": ""
         },
-        { 
+        {
             "q": "12. පසෙහි ආම්ලිකතාවය (Acidity) සමනය කිරීම සඳහා භාවිතා කරන්නේ කුමක්ද?",
             "options": ["හුණු (Lime)", "ලුණු", "නයිට්‍රේට්", "කැල්සියම් කාබනේට්"],
             "explanation": "ආම්ලික පසෙහි pH අගය වැඩි කර පස උදාසීන කිරීම මගින් බෝග වර්ධනයට සුදුසු තත්ත්වයක් ඇති කිරීමට හුණු භාවිතා කරයි.",
@@ -655,7 +655,7 @@ const allPapers = {
         ]
     },
     "paper8": {
-    "title": Safety and Health ",
+    "title": "Safety and Health ",
     "questions": [
         {
             "q": "1. ට්‍රැක්ටරයක් ආරක්ෂිතව පැදවීමේදී අනිවාර්යයෙන්ම කළ යුතු ක්‍රියාව කුමක්ද?",
@@ -795,7 +795,7 @@ const allPapers = {
         ]
     },
      "paper9": {
-    "title": Rice Farming 1",
+    "title": "Rice Farming 1",
     "questions": [
          {
             "q": "1. බීජ සකස් කිරීමේදී විෂබීජ නාශනය කිරීමේ (Disinfection) අරමුණ කුමක්ද?",
@@ -952,7 +952,7 @@ const allPapers = {
      },
     
     "paper10": {
-    "title": Rice Farming 2 ",
+    "title": "Rice Farming 2 ",
     "questions": [
          {
       "q": "1. අස්වනු නෙළීමෙන් පසු වී සැකසීමේ නිවැරදි ක්‍රමය කුමක්ද?",
@@ -1120,7 +1120,7 @@ const allPapers = {
     },
     
     "paper11": {
-    "title": Field and Vegetables 1 ",
+    "title": "Field and Vegetables 1 ",
     "questions": [
   {
     "q": "1. ගෝවා වගාවට සුදුසුම දේශගුණික තත්ත්වය කුමක්ද?",
@@ -1285,7 +1285,7 @@ const allPapers = {
 ]
     },
     "paper12": {
-    "title": Field and Vegetables 2 ",
+    "title": "Field and Vegetables 2 ",
     "questions": [
   {
     "q": "1. ගෝවා වගාවේදී පළිබෝධ පාලනය සඳහා ඵලදායී ක්‍රමය කුමක්ද?",
@@ -1451,7 +1451,7 @@ const allPapers = {
 ]
     },
     "paper13": {
-    "title": Greenhouse 1",
+    "title": "Greenhouse 1",
     "questions": [
   {
     "q": "1. තක්කාලි වාරික වගාවේ ලක්ෂණය කුමක්ද?",
@@ -1697,7 +1697,7 @@ const allPapers = {
     },
     
     "paper14": {
-    "title": Greenhouse 2",
+    "title": "Greenhouse 2",
     "questions":   [
   {
     "q": "1. උෂ්ණත්ව කළමනාකරණය වැදගත් වීමට හේතුව කුමක්ද?",
@@ -1937,7 +1937,7 @@ const allPapers = {
 ]
     },
         "paper15": {
-        "title": Fruit Growing 1",
+        "title": "Fruit Growing 1",
         "questions": [
             {
   "q": "1. පළතුරු ගසක් යනු පලතුරු අස්වැන්න සඳහා වගා කරන ලද “ගසක්” වේ. කොමඩු, පැණි පුහුල් වැනි පලතුරු ද අස්වනු නෙළන තැනුත්, ඒවා වසරක් තුළ මිය යන “ශාක” නිසා ඒවා එළවළු වේ.'",
@@ -2180,7 +2180,7 @@ const allPapers = {
 ]
         },
             "paper16": {
-        "title": Fruit Growing 2",
+        "title": "Fruit Growing 2",
         "questions": [
   {
     "q": "1. පලතුරු ගස්වල වාරික වගාවේදී භාවිතා කරන නියෝජිත පහසුකම කුමක්ද?",
@@ -2424,7 +2424,7 @@ const allPapers = {
 ]
             },
             "paper17": {
-        "title": Terms ",
+        "title": "Terms ",
         "questions": [
   {
     "q": "1. සීසෑම (කෝකි) යනු කුමක්ද?",
@@ -2669,7 +2669,7 @@ const allPapers = {
 ]
             },
 "paper18": {
-        "title": mathematical question",
+        "title": "mathematical question",
         "questions": [
   {
     "q": "1. 10 - 8 - 8 ලෙස සඳහන්ව ඇති පොහොර බෑගයක අඩංගු පොහොර කුමන වර්ගයක් වේද?",
