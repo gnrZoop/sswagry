@@ -462,3 +462,25 @@ a
 #paper-select:not(:invalid) {
     color: #e1e0db !important;
 }
+/* style.css එකට මෙය එකතු කරන්න */
+#question-box .option-btn,
+#question-box button,
+#question-box .option {
+    font-size: 0.9em !important;
+}
+
+/* ප්‍රශ්නයටත් */
+#question-box .q-text,
+#question-box .question {
+    font-size: 1em !important;
+}
+
+/* explanation එකටත් */
+#question-box .explanation {
+    font-size: 0.9em !important;
+}
+.ind-box {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+}
