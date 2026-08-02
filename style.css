@@ -485,7 +485,7 @@ a
     font-size: 13px !important;
 }
 #time-input::placeholder {
-    font-size: 0.7rem !important;  /* හෝ 0.7em */
+    font-size: 0.7em !important;  /* හෝ 0.7em */
     font-style: italic !important;
     color: #8e8d8a !important;
 }
