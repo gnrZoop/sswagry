@@ -3,6 +3,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/gnrzoop/sswagry)](https://github.com/gnrzoop/sswagry/commits/main)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fgnrzoop.github.io%2Fsswagry%2F)](https://gnrzoop.github.io/sswagry/)
+[![Telegram](https://img.shields.io/badge/Telegram-Join-blue?logo=telegram)](https://t.me/sswagry)
 
 **SSW Agriculture (Specified Skilled Worker - Agriculture)** විභාගය සඳහා වන **ප්‍රධාන ද්වාරය** වන මෙය, ජපානයේ කෘෂිකාර්මික ක්ෂේත්‍රයේ රැකියා කිරීමට අපේක්ෂා කරන සිංහල භාෂිකයින් සඳහා සම්පත් එකතු කිරීමේ ප්‍රධාන මධ්‍යස්ථානයයි.
 
@@ -38,6 +39,17 @@
 | :--- | :--- | :--- |
 | **sswagry** (මෙය) | [gnrzoop.github.io/sswagry/](https://gnrzoop.github.io/sswagry/) | **ප්‍රධාන ද්වාරය:** සම්පත් සාරාංශය, විභාග ප්‍රශ්න, PDF බාගත කිරීම්. |
 | **sswagrysinhala** | [gnrzoop.github.io/sswagrysinhala/](https://gnrzoop.github.io/sswagrysinhala/) | **උප අඩවිය:** විස්තරාත්මක ජපන් භාෂා පාඩම් මාලාව (පාඩම් 58). |
+
+---
+
+## 💬 ප්‍රජා සහ සහාය
+
+**Telegram කණ්ඩායමට සම්බන්ධ වන්න:** [t.me/sswagry](https://t.me/sswagry)
+
+මෙම Telegram කණ්ඩායම නිර්මාණය කර ඇත්තේ:
+*   **SSW Agriculture** විභාගය පිළිබඳ නවතම යාවත්කාලීන තොරතුරු බෙදා ගැනීමට.
+*   වෙනත් අපේක්ෂකයින් සමඟ සාකච්ඡා කිරීමට සහ උපදෙස් හුවමාරු කර ගැනීමට.
+*   ඔබගේ ගැටළු සහ ප්‍රශ්න සඳහා ඉක්මන් ප්‍රතිචාර ලබා ගැනීමට.
 
 ---
 
